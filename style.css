@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+}
+
+.main-game{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.genius{
+    display: grid;
+    grid-template-areas: 'green-area red-area' 'yellow-area blue-area';
+    gap: 10px;
+    border: 1px solid #2d3436;
+    background-color: #2d3436;
+    border-radius: 100%;
+    width: 650px;
+    height: 650px;
+}
+
+.blue{
+    grid-area: blue-area;
+    background-color: blue;
+    border-bottom-right-radius: 100%;
+}
+
+.red{
+    grid-area: red-area;
+    background-color: red;
+    border-top-right-radius: 100%;
+}
+
+.yellow{
+    grid-area: yellow-area;
+    background-color: yellow;
+    border-bottom-left-radius: 100%;
+}
+
+.green{
+    grid-area: green-area;
+    background-color: green;
+    border-top-left-radius: 100%;
+}
+
+.selected{
+    opacity: 0.4;
+}
+
+.points{
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+    color: #FFF;
+}
+
+button {
+    margin: 20px;
+  }
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px #2d3436,
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+}
+
+
+button:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    box-shadow:
+        -7px -7px 20px 0px #2d3436,
+        -4px -4px 5px 0px #2d3436,
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    color: #FFF;
+}
+
+button:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+}
+
+button:active {
+    top: 2px;
+}
